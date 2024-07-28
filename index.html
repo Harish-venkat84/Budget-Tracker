@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      type="image/png"
+      sizes="96x96"
+      rel="icon"
+      href="./icons8-budget-96.png"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="outer-wrap">
+        <div class="inner-wrap">
+          <section class="heading">
+            <p class="title">Budget Tracker</p>
+            <p class="subtitle">Easiest Way To Track Your Transactions</p>
+          </section>
+
+          <section class="transaction-control">
+            <div class="actions">
+              <h3>Add Transaction</h3>
+              <form class="add">
+                <input
+                  type="text"
+                  name="source"
+                  placeholder="Source"
+                  autocomplete="off"
+                  required
+                  pattern=".{3,}"
+                  title="Please enter at least 3 characters"
+                />
+                <select
+                  name="transactions"
+                  aria-placeholder="asdasd"
+                  class="type-transacions"
+                  required
+                >
+                  <option value="" disabled selected>Select Transaction</option>
+                  <option value="Income">Income</option>
+                  <option value="Expense">Expense</option>
+                </select>
+                <input
+                  class="amount-field"
+                  type="number"
+                  name="amount"
+                  placeholder="Amount"
+                  autocomplete="off"
+                  required
+                />
+                <input type="submit" value="Add Transactions" />
+              </form>
+            </div>
+            <div class="stats">
+              <h3>Statistics</h3>
+              <p class="balance">Balance: ₹<span id="balance">0</span></p>
+              <p class="income">Income: ₹<span id="income">0</span></p>
+              <p class="expense">Expense: ₹<span id="expense">0</span></p>
+            </div>
+          </section>
+
+          <section class="transaction-history">
+            <h3>Transaction History</h3>
+            <div class="records">
+              <div class="income">
+                <h3>Income</h3>
+                <ul class="income-list">
+                  <!-- <li data-id="">
+                    <p>
+                      <span>Javascript</span>
+                      <span id="time">12:45:38 AM 5/19/2024</span>
+                    </p>
+                    <span>₹700</span>
+                    <i class="bi bi-trash-fill delete"></i>
+                  </li> -->
+                </ul>
+              </div>
+
+              <div class="expense">
+                <h3>Expense</h3>
+                <ul class="expense-list">
+                  <!-- <li data-id="">
+                    <p>
+                      <span>Javascript</span>
+                      <span id="time">12:45:38 AM 5/19/2024</span>
+                    </p>
+                    <span>₹700</span>
+                    <i class="bi bi-trash-fill delete"></i>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
